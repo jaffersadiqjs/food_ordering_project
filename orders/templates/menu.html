@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Menu</h2>
+<table>
+<tr><th>Item</th><th>Price</th><th>Action</th></tr>
+{% for item in items %}
+<tr>
+  <td>{{ item.name }}</td>
+  <td>₹{{ item.price }}</td>
+  <td><a href="/orders/add_to_cart/{{ item.id }}/"><button>Add to Cart</button></a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Ordering System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<nav>
+    <a href="/">🏠 Home</a> |
+    <a href="/orders/menu/">🍔 Menu</a> |
+    <a href="/orders/cart/">🛒 Cart</a> |
+    <a href="/restaurant/dashboard/">🧾 Dashboard</a>
+</nav>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
